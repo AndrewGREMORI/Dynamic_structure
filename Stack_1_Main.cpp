@@ -5,9 +5,6 @@
 #include "Stack.h"
 
 
-#include <iostream>
-using namespace std;
-
 int main()
 {
 	Node *top = first(1); 
@@ -18,8 +15,13 @@ int main()
 	for (int i = 2; i < k; i++)
 		push(&top, i); 
 
+    cout << "Print" <<endl;
+    print(top);
+
+    cout << endl<< endl <<"Print and delete"<<endl;
 	while (top)
 		cout << pop(&top) << endl;
-
+        
     return 0;
 }
+
