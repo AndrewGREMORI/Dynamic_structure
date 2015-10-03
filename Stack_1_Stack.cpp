@@ -1,4 +1,5 @@
 
+
 #include "stdafx.h"
 #include "stack.h"
 
@@ -25,4 +26,15 @@ int pop(Node **top)
 	*top = (*top)->field;
 	delete new_field;
 	return temp;
+}
+
+void print(Node *top)
+{
+    while(top)
+    {
+        int temp = top->data;
+        cout << temp << endl;
+        Node *new_field = top;
+        top=top->field;
+    }
 }
